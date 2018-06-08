@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<title>Project</title>
+<body>
+
+<h2><centre>Manual Slideshow</centre></h2>
+
+<div class="slide">
+  <img class="mySlides" src="My cats.jpg" style="width:60%">
+  <img class="mySlides" src="picture One.jpg" style="width:60%">
+  
+
+  <button class="button black display left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="-button black display right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
