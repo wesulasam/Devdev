@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question (ii)</title>
+</head>
+<body>
+
+
+	<input type="number" value="" placeholder="Enter First Side" id="a"/><br>
+	<input type="number" value="" placeholder="Enter Second Side" id="b"/><br>
+	<input type="number" value="" placeholder="Enter Third Side" id="c"/><br/>
+	<p id="result"></p>
+	<button id="compute" onclick="computeArea()">Compute Area</button>
+
+	<script type="text/javascript">
+		function computeArea(){
+			var a = document.getElementById("a").value;
+			var b = document.getElementById("b").value;
+			var c = document.getElementById("c").value;
+
+			if((a=='')||(b=='')||(c=='')){
+				document.getElementById("result").innerHTML = "Please Fill in all the Entries";
+				return false; //Stop execution
+			}
+
+			var base; //Base is the third side which is not equal
+			var height; //Use Pythogras theorem to find height
+
+			//Check to see if it is isosceles
+			if(a==b){
+				base = c;
+				height = getHeight(base,a);
+			}else if(a==c){
+				base = b;
+				height = getHeight(base,a);
+			}else if(b==c){
+				base = a;
+				height = getHeight(base,c);
+			}
+
+			var area = 0.5* base* height;
+			document.getElementById("result").innerHTML = area;
+
+
+
+		}
+
+		function getHeight(base,hyp){
+			//Get a half of the base and square it, let it be x
+			var x = Math.pow((0.5*base),2);
+			var x = Math.round(x,3);//Round off to the nearest 3 elements
+			//Get the square of the hyp and store it as y
+			var y = Math.pow(hyp,2);
+
+			//Using pythogras theorem, get the height and store it as height
+			var height = Math.sqrt(y-x);
+			var height = Math.round(height,3);//Round off height to 3 dp
+			return height;
+		}
+	</script>
+
+</body>
+</html>

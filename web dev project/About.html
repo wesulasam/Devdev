@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name = "viewport"
+content="width=device-width,initial-scale=1">
+<style>
+.fa {
+	padding:20px;
+	font-size: 30px;
+	width:120px;
+	text-align: center;
+	text-decoration: none;
+	margin: 10px 10px; 
+}
+.fa:hover{
+	opacity:0.7;
+}
+.fa-facebook{
+	background:#3B5998;
+	color: white;
+}
+
+body{
+	margin: 0;
+	font-family: arial;
+}
+ .header{
+ background-color: red;
+	padding: 40px;
+	text-align: center;
+}
+
+}
+.header{
+	padding: 10px 16px;
+	background:purple;
+	color:black;
+}
+.content{
+	padding: 16px;
+}
+.sticky{
+	position: fixed;
+	top:0;
+	width: 100%;
+}
+.sticky + .content{
+	padding-top: 100px;
+}
+
+#myDiv{
+	width: 70%;
+	padding: 30px 10px;
+	text-align: center;
+	background-color: red;
+	margin-top: 70px;
+}
+
+</style>
+</head>
+<body background="nba2k18.jpg" style="width: 100%;height: 100%" >
+	<center>
+	<div class="header" id="myheader">
+		<h2 style="font-size: 50px;">About</h2>
+	</center>
+		
+	</div>
+
+	<p>Click the about button to show more information</p>
+	<button onclick="myFunction()">About</button>
+	<div id="myDiv">
+		This system was developed in order to assist owners of gaming arenas to manage their businesses efficiently.
+		
+	</div>
+	<script>
+		function myFunction(){
+			var x=
+			document.getElementById("myDiv");
+			if(x.style.display==="none"){
+				x.style.display="block";
+			}else {
+				x.style.display="none";
+			}
+		}
+	</script>
+	<h2 style="font-size: 70px" colour>Follow us on;</h2>
+	
+	<a href="https://www.facebook.com/" class="fa-facebook"><img src="facebook.jpg" alt="facebook.jpg" style="width: 5%; height:20%"></a>
+	<br>
+	<br>
+	<a href="https://www.instagram.com/accounts/login/" ><img src="instagram.jpg" alt="instagram.jpg" style="width: 5%; height: 20%"></a>
+	<br>
+	<br>
+	<a href = "https://twitter.com/login?lang=en"><img src="twitter.jpg" alt="twitter.jpg" style="width: 5%; height: 20%"></a>
+
+	<h2> Subscribe on;</h2>
+	<a href="https://www.youtube.com/"><img src="youtube.jpg" alt="youtube.jpg" style="width: 5%;height: 20%"></a>
+
+
+
+
+</body>
+</html>

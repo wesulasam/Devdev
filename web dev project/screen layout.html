@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport"
+	content="width-device-width,initial-scale=1">
+	<style>
+	#myheader{
+		background-color: purple;
+		color: black;
+		padding: 40px;
+		text-align: center;
+
+	}
+	body{
+		font-family: "lato",sanserif;
+	}
+	.sidenav{
+		height: 100%;
+		width: 200px;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: black;
+		overflow-x:hidden;
+		padding-top: 20px; 
+
+	}
+	.sidenav a {
+		padding: 6px 6px 6px 32px;
+		text-decoration: none;
+		font-size: 25px;
+		color: grey;
+		display: block;
+	}
+	.sidenav a:hover {
+		color: purple;
+
+	}
+	.main {
+		margin-left: 200px;
+	}
+	@media screen and (max-height:450px){
+		.sidenav {padding-top: 15px;}
+		.sidenav a {font-size: 18px;}
+	}
+	*{
+		box-sizing: border-box;
+	}
+	.column{
+		float: left;
+		width: 33.3%;
+		padding: 5px;
+	}
+	.row::after{
+		content: "";
+		clear: both;
+		display: table;
+
+	}
+	@media screen and (max-width:500px)
+	{
+		.column{
+			width: 100%;
+		}
+	}
+	.bg{
+		background-image: 
+		url("fifa18.jpg");
+		height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	body{margin: 0;}
+	.icon-bar{
+
+	}
+
+	body{margin: 0;}
+	.icon bar{
+		width: 100%;
+		background-color: red;
+		overflow: auto;
+	}
+	.icon-bar a {
+		float: left;
+		width: 20%;
+		text-align: center;
+		padding: 12px 0;
+		transition: all 0.3s ease;
+		color: purple;
+		font-size: 36px;
+	}
+	.icon-bar a:hover {
+		background-color: black;
+	}
+	.active{
+		background-color: purple
+		!important;
+	}
+
+
+
+</style>
+</head>
+<body style="background-color: black">
+	
+	<div class = "sidenav">
+		<a href="about.html">About</a>
+		<a href="#">Stations</a>
+		<a href="#">sign-up</a>
+		<a href="Tournament.html">Tournament</a>
+
+	</div>
+		<div class = "row">
+			<div class="column">
+				<img src = "fifa18.jpg" alt="fifa18.jpg style="max-width:100%;height:auto;">
+			</div>
+</body>
+</html>
+
+
